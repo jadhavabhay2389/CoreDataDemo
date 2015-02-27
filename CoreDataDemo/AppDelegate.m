@@ -16,7 +16,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //coping of file
+    NSString * copypath=[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"PersonData"];
+    
+    //read all document path
+  NSArray * patharray=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString * docDirectory=[patharray objectAtIndex:0];
+    //Db to document paste path
+    NSString * paste=[NSString stringWithFormat:@"%@/%@",docDirectory,@"PersonData"];
+    
+    if(![[NSFileManager defaultManager]fileExistsAtPath:paste ])
+    {//if file not found
+        NSError *error;
+        [[NSFileManager defaultManager] copyItemAtPath:copypath toPath:paste error:&error];
+    }
+    
     return YES;
 }
 

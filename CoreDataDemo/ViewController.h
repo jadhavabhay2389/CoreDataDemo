@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <sqlite3.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    sqlite3 *db;
+}
+@property (weak, nonatomic) IBOutlet UITextField *fName;
+@property (weak, nonatomic) IBOutlet UITextField *mName;
+@property (weak, nonatomic) IBOutlet UITextField *lName;
 
+
+- (IBAction)submit:(UIButton *)sender;
 
 @end
 

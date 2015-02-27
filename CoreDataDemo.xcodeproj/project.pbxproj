@@ -15,6 +15,10 @@
 		E41DEF871A9CDB7900B26364 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E41DEF861A9CDB7900B26364 /* Images.xcassets */; };
 		E41DEF8A1A9CDB7900B26364 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E41DEF881A9CDB7900B26364 /* LaunchScreen.xib */; };
 		E41DEF961A9CDB7900B26364 /* CoreDataDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DEF951A9CDB7900B26364 /* CoreDataDemoTests.m */; };
+		E41DEFA41A9CDCE300B26364 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DEFA31A9CDCE300B26364 /* Person.m */; };
+		E41DEFA61A9CE27C00B26364 /* PersonData in Resources */ = {isa = PBXBuildFile; fileRef = E41DEFA51A9CE27C00B26364 /* PersonData */; };
+		E41DEFA81A9CEAB000B26364 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E41DEFA71A9CEAB000B26364 /* libsqlite3.0.dylib */; };
+		E41DEFAB1A9CF89E00B26364 /* ShowTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41DEFAA1A9CF89E00B26364 /* ShowTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,12 @@
 		E41DEF8F1A9CDB7900B26364 /* CoreDataDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41DEF941A9CDB7900B26364 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E41DEF951A9CDB7900B26364 /* CoreDataDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataDemoTests.m; sourceTree = "<group>"; };
+		E41DEFA21A9CDCE300B26364 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		E41DEFA31A9CDCE300B26364 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		E41DEFA51A9CE27C00B26364 /* PersonData */ = {isa = PBXFileReference; lastKnownFileType = file; path = PersonData; sourceTree = "<group>"; };
+		E41DEFA71A9CEAB000B26364 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		E41DEFA91A9CF89E00B26364 /* ShowTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowTableViewController.h; sourceTree = "<group>"; };
+		E41DEFAA1A9CF89E00B26364 /* ShowTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E41DEFA81A9CEAB000B26364 /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +76,8 @@
 		E41DEF6A1A9CDB7800B26364 = {
 			isa = PBXGroup;
 			children = (
+				E41DEFA71A9CEAB000B26364 /* libsqlite3.0.dylib */,
+				E41DEFA51A9CE27C00B26364 /* PersonData */,
 				E41DEF751A9CDB7800B26364 /* CoreDataDemo */,
 				E41DEF921A9CDB7900B26364 /* CoreDataDemoTests */,
 				E41DEF741A9CDB7800B26364 /* Products */,
@@ -92,6 +105,10 @@
 				E41DEF881A9CDB7900B26364 /* LaunchScreen.xib */,
 				E41DEF7D1A9CDB7900B26364 /* CoreDataDemo.xcdatamodeld */,
 				E41DEF761A9CDB7800B26364 /* Supporting Files */,
+				E41DEFA21A9CDCE300B26364 /* Person.h */,
+				E41DEFA31A9CDCE300B26364 /* Person.m */,
+				E41DEFA91A9CF89E00B26364 /* ShowTableViewController.h */,
+				E41DEFAA1A9CF89E00B26364 /* ShowTableViewController.m */,
 			);
 			path = CoreDataDemo;
 			sourceTree = "<group>";
@@ -205,6 +222,7 @@
 				E41DEF851A9CDB7900B26364 /* Main.storyboard in Resources */,
 				E41DEF8A1A9CDB7900B26364 /* LaunchScreen.xib in Resources */,
 				E41DEF871A9CDB7900B26364 /* Images.xcassets in Resources */,
+				E41DEFA61A9CE27C00B26364 /* PersonData in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,10 +240,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E41DEFA41A9CDCE300B26364 /* Person.m in Sources */,
 				E41DEF7C1A9CDB7900B26364 /* AppDelegate.m in Sources */,
 				E41DEF7F1A9CDB7900B26364 /* CoreDataDemo.xcdatamodeld in Sources */,
 				E41DEF821A9CDB7900B26364 /* ViewController.m in Sources */,
 				E41DEF791A9CDB7900B26364 /* main.m in Sources */,
+				E41DEFAB1A9CF89E00B26364 /* ShowTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
